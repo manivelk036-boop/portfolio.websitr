@@ -278,3 +278,48 @@ p{
 }
 
 }
+.dark{
+    background:#111827;
+    color:white;
+}
+
+.dark section{
+    background:#1f2937;
+    color:white;
+}
+
+.dark h1,
+.dark h2,
+.dark h3{
+    color:white;
+}
+
+.dark input,
+.dark textarea{
+    background:#374151;
+    color:white;
+    border:1px solid #555;
+}
+
+#progressBar{
+
+position:fixed;
+top:0;
+left:0;
+
+width:0%;
+
+height:6px;
+
+background:#2563eb;
+
+z-index:9999;
+
+}
+
+nav a.active{
+
+color:#38bdf8;
+font-weight:bold;
+
+}

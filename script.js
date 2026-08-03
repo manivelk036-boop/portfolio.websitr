@@ -190,3 +190,102 @@ skills.forEach(skill=>{
 // ================================
 
 console.log("Portfolio Loaded Successfully");
+
+const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.addEventListener("click", function () {
+
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        themeBtn.innerHTML = "☀️ Light Mode";
+    } else {
+        themeBtn.innerHTML = "🌙 Dark Mode";
+    }
+
+});
+
+const message = document.getElementById("message");
+const count = document.getElementById("count");
+
+message.addEventListener("input", function () {
+
+    count.innerHTML = message.value.length + " / 200";
+
+});
+
+window.addEventListener("scroll",function(){
+
+let scrollTop=document.documentElement.scrollTop;
+
+let scrollHeight=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+
+let progress=(scrollTop/scrollHeight)*100;
+
+document.getElementById("progressBar").style.width=progress+"%";
+
+});
+
+const sections=document.querySelectorAll("section");
+
+const navLinks=document.querySelectorAll("nav a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(section=>{
+
+const sectionTop=section.offsetTop-100;
+
+if(pageYOffset>=sectionTop){
+
+current=section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href")==="#"+current){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+
+function updateClock(){
+
+let now=new Date();
+
+document.getElementById("clock").innerHTML=now.toLocaleString();
+
+}
+
+setInterval(updateClock,1000);
+
+updateClock();
+
+const quotes=[
+
+"Keep Learning!",
+"Never Give Up!",
+"Dream Big!",
+"Success Comes Through Consistency!",
+"Code. Learn. Repeat."
+
+];
+
+function showQuote(){
+
+let random=Math.floor(Math.random()*quotes.length);
+
+document.getElementById("quote").innerHTML=quotes[random];
+
+}

@@ -21,7 +21,15 @@ function hireMe() {
 // ================================
 
 function downloadResume() {
-    alert("Resume download will be available soon.");
+
+    const link = document.createElement("a");
+
+    link.href = "resume.pdf";
+
+    link.download = "Manivelkumar_S_Resume.pdf";
+
+    link.click();
+
 }
 
 // ================================

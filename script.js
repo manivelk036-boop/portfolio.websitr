@@ -19,15 +19,15 @@ function hireMe() {
 // ================================
 // Download Resume
 // ================================
-
 function downloadResume() {
 
+    // Open the resume in a new tab
+    window.open("resume.pdf", "_blank");
+
+    // Automatically download it
     const link = document.createElement("a");
-
     link.href = "resume.pdf";
-
     link.download = "Manivelkumar_S_Resume.pdf";
-
     link.click();
 
 }

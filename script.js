@@ -297,3 +297,76 @@ let random=Math.floor(Math.random()*quotes.length);
 document.getElementById("quote").innerHTML=quotes[random];
 
 }
+// ===============================
+// Animated Statistics Counter
+// ===============================
+
+function animateCounter(id, target) {
+
+    let count = 0;
+
+    let speed = target / 100;
+
+    let interval = setInterval(() => {
+
+        count += Math.ceil(speed);
+
+        if (count >= target) {
+
+            count = target;
+
+            clearInterval(interval);
+
+        }
+
+        document.getElementById(id).innerHTML = count;
+
+    }, 20);
+
+}
+
+animateCounter("projectCount", 10);
+animateCounter("certificateCount", 3);
+animateCounter("skillCount", 9);
+
+// ===============================
+// Scroll Reveal
+// ===============================
+
+const revealElements = document.querySelectorAll("section");
+
+function revealOnScroll(){
+
+    revealElements.forEach(section=>{
+
+        const position = section.getBoundingClientRect().top;
+
+        const screen = window.innerHeight - 100;
+
+        if(position < screen){
+
+            section.style.opacity="1";
+
+            section.style.transform="translateY(0)";
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll",revealOnScroll);
+
+revealOnScroll();
+
+revealElements.forEach(section=>{
+
+    section.style.opacity="0";
+
+    section.style.transform="translateY(50px)";
+
+    section.style.transition="all .8s";
+
+});
+
+console.log("🚀 Portfolio Day 11 Loaded Successfully");

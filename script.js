@@ -198,21 +198,41 @@ skills.forEach(skill=>{
 // ================================
 
 console.log("Portfolio Loaded Successfully");
+// ===========================
+// Dark Mode with Memory
+// ===========================
 
 const themeBtn = document.getElementById("themeBtn");
+
+// Load saved theme
+if(localStorage.getItem("theme") === "dark"){
+
+    document.body.classList.add("dark");
+
+    themeBtn.innerHTML = "☀️ Light Mode";
+
+}
 
 themeBtn.addEventListener("click", function () {
 
     document.body.classList.toggle("dark");
 
-    if (document.body.classList.contains("dark")) {
+    if(document.body.classList.contains("dark")){
+
         themeBtn.innerHTML = "☀️ Light Mode";
-    } else {
+
+        localStorage.setItem("theme","dark");
+
+    }
+    else{
+
         themeBtn.innerHTML = "🌙 Dark Mode";
+
+        localStorage.setItem("theme","light");
+
     }
 
 });
-
 const message = document.getElementById("message");
 const count = document.getElementById("count");
 
@@ -370,3 +390,43 @@ revealElements.forEach(section=>{
 });
 
 console.log("🚀 Portfolio Day 11 Loaded Successfully");
+
+// ===========================
+// Loading Screen
+// ===========================
+
+window.addEventListener("load", function () {
+
+    setTimeout(function () {
+
+        document.getElementById("loader").style.display = "none";
+
+    }, 2000);
+
+});
+
+function filterProjects(category){
+
+    const projects = document.querySelectorAll(".project-card");
+
+    projects.forEach(project => {
+
+        if(category === "all"){
+
+            project.style.display = "block";
+
+        }
+        else if(project.classList.contains(category)){
+
+            project.style.display = "block";
+
+        }
+        else{
+
+            project.style.display = "none";
+
+        }
+
+    });
+
+}

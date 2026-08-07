@@ -23,6 +23,23 @@
 </head>
 
 <body>
+    <!-- ===========================
+Loading Screen
+=========================== -->
+
+<div id="loader">
+
+    <div class="loader-content">
+
+        <h1>MK</h1>
+
+        <p>Loading Portfolio...</p>
+
+        <div class="spinner"></div>
+
+    </div>
+
+</div>
 
 <!-- Progress Bar -->
 
@@ -47,11 +64,9 @@
 <a href="#skills">Skills</a>
 
 <a href="#projects">Projects</a>
-
 <a href="#education">Education</a>
-
+<a href="#testimonials">Testimonials</a>
 <a href="#contact">Contact</a>
-
 </nav>
 
 </header>
@@ -76,6 +91,15 @@ Hi, I'm
 
 <h3 id="typing"></h3>
 
+<!-- Open To Work Badge -->
+
+<div class="status-badge">
+
+    <span class="dot"></span>
+
+    <span>🟢 Open to Work</span>
+
+</div>
 <p>
 
 A passionate Computer Science Engineering student interested in Java Backend Development, Spring Boot, Web Development, and building scalable real-world applications.
@@ -247,7 +271,23 @@ My goal is to become a skilled Java Backend Developer and contribute to scalable
 <section id="projects">
 
     <h2>My Projects</h2>
+<section id="projects">
 
+<h2>My Projects</h2>
+
+<!-- Filter Buttons -->
+
+<div class="filter-buttons">
+
+    <button onclick="filterProjects('all')">All</button>
+
+    <button onclick="filterProjects('spring')">Spring Boot</button>
+
+    <button onclick="filterProjects('web')">Web</button>
+
+</div>
+
+<!-- Project 1 -->
     <!-- Project 1 -->
 
     <div class="project-card">
@@ -295,9 +335,8 @@ My goal is to become a skilled Java Backend Developer and contribute to scalable
 
     <!-- Project 2 -->
 
-    <div class="project-card">
-
-        <h3>🎓 Student Complaint Management System</h3>
+    <div class="project-card spring">
+          <h3>🎓 Student Complaint Management System</h3>
 
         <p>
 
@@ -332,14 +371,17 @@ My goal is to become a skilled Java Backend Developer and contribute to scalable
             <strong>Live Demo:</strong> Coming Soon
 
         </p>
-
     </div>
+
+      
+
+    
 
     <br>
 
     <!-- Project 3 -->
 
-    <div class="project-card">
+    <div class="project-card web">
 
         <h3>💼 Personal Portfolio Website</h3>
 
@@ -483,6 +525,84 @@ My goal is to become a skilled Java Backend Developer and contribute to scalable
 
 </section>
 
+<section id="timeline">
+
+    <h2>🚀 My Learning Journey</h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <h3>2024</h3>
+            <p>Started B.E. Computer Science & Engineering.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>2025</h3>
+            <p>Learned HTML, CSS, JavaScript, Git & GitHub.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>2026</h3>
+            <p>Learning Java, Spring Boot, MySQL and building full-stack projects like CampusKart.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Future</h3>
+            <p>Become a Java Backend Developer and Full Stack Developer.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Testimonials Section -->
+
+<section id="testimonials">
+
+    <h2>💬 Testimonials</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card">
+
+            <p>
+
+                "Manivel is a dedicated learner who consistently improves his programming and web development skills."
+
+            </p>
+
+            <h4>— Academic Mentor</h4>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <p>
+
+                "He develops clean, responsive websites and shows strong interest in Java backend development."
+
+            </p>
+
+            <h4>— Project Reviewer</h4>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <p>
+
+                "Quick learner, hardworking, and always eager to explore new technologies."
+
+            </p>
+
+            <h4>— Team Member</h4>
+
+        </div>
+
+    </div>
+
+</section>
+
 <!-- ================= CONTACT ================= -->
 
 <section id="contact">
@@ -591,6 +711,23 @@ My goal is to become a skilled Java Backend Developer and contribute to scalable
 </div>
 
 </section>
+
+<!-- ✅ ADD VISITOR COUNTER HERE -->
+
+<section id="visitors">
+
+    <h2>👀 Portfolio Visitors</h2>
+
+    <div class="visitor-card">
+
+        <h1 id="visitorCount">0</h1>
+
+        <p>Total Visitors</p>
+
+    </div>
+
+</section>
+
 <!-- ================= DEPLOYMENT ================= -->
 
 <section id="deployment">
@@ -632,67 +769,82 @@ My goal is to become a skilled Java Backend Developer and contribute to scalable
 </main>
 
 <!-- ================= FOOTER ================= -->
-
 <footer>
 
-    <h2>Let's Connect</h2>
+    <div class="footer-container">
 
-    <p>
+        <!-- About -->
 
-        Thank you for visiting my portfolio.
+        <div class="footer-box">
 
-        Feel free to connect with me through the following platforms.
+            <h3>Manivel Kumar</h3>
 
-    </p>
+            <p>
 
-    <div class="social-icons">
+                Passionate Computer Science Engineering student
+                focused on Java Backend Development,
+                Spring Boot, and Full Stack Web Development.
 
-        <a href="https://github.com/manivelk036-boop"
-           target="_blank">
+            </p>
 
-            🐙 GitHub
+        </div>
 
-        </a>
+        <!-- Quick Links -->
 
-        <a href="https://www.linkedin.com/in/manivelkumar-s-143a89324/"
-           target="_blank">
+        <div class="footer-box">
 
-            💼 LinkedIn
+            <h3>Quick Links</h3>
 
-        </a>
+            <a href="#home">Home</a><br>
 
-        <a href="mailto:manivelk036@gmail.com">
+            <a href="#about">About</a><br>
 
-            📧 Email
+            <a href="#skills">Skills</a><br>
 
-        </a>
+            <a href="#projects">Projects</a><br>
 
-        <a href="tel:+919843364726">
+            <a href="#services">Services</a><br>
 
-            📞 Phone
+            <a href="#contact">Contact</a>
 
-        </a>
+        </div>
+
+        <!-- Contact -->
+
+        <div class="footer-box">
+
+            <h3>Contact</h3>
+
+            <p>📍 Manapparai, Trichy</p>
+
+            <p>📞 +91 9843364726</p>
+
+            <p>📧 manivelk036@gmail.com</p>
+
+        </div>
+
+        <!-- Social Links -->
+
+        <div class="footer-box">
+
+            <h3>Follow Me</h3>
+
+            <a href="https://github.com/manivelk036-boop" target="_blank">🐙 GitHub</a><br>
+
+            <a href="https://www.linkedin.com/in/manivelkumar-s-143a89324/" target="_blank">💼 LinkedIn</a><br>
+
+            <a href="mailto:manivelk036@gmail.com">📧 Email</a>
+
+        </div>
 
     </div>
 
-    <br>
+    <hr>
 
-    <p>
+    <p class="copyright">
 
-        📍 Manapparai, Tiruchirappalli,
-        Tamil Nadu, India
-
-    </p>
-
-    <br>
-
-    <p>
-
-        © <span id="year"></span>
-
-        Manivel Kumar.
-
-        All Rights Reserved.
+        © <span id="year"></span> Manivel Kumar |
+        Made with ❤️ using HTML, CSS & JavaScript
 
     </p>
 

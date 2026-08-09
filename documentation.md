@@ -113,7 +113,7 @@ Google Lighthouse results:
 - Performance: 96
 - Accessibility: 97
 - Best Practices: 100
-- SEO: 66
+- SEO: 96
 
 ## 8. Deployment
 
